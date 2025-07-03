@@ -1,0 +1,148 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Horizontal scrollable row for all dishes, max image/card size */
+.dish-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 36px;
+  overflow-x: auto;
+  padding: 2rem 0 2rem 0;
+  justify-content: flex-start;
+  align-items: stretch;
+  scrollbar-width: thin;
+  scrollbar-color: #bdbdbd #f6f8fa;
+}
+.dish-grid::-webkit-scrollbar {
+  height: 12px;
+}
+.dish-grid::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 6px;
+}
+.dish-grid::-webkit-scrollbar-track {
+  background: #f6f8fa;
+}
+.dish-card {
+  min-width: 340px;
+  max-width: 400px;
+  min-height: 420px;
+  max-height: 480px;
+  padding: 32px 18px 28px 18px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 6px 32px rgba(34, 34, 59, 0.13);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.dish-card:hover {
+  box-shadow: 0 12px 48px rgba(34, 34, 59, 0.18);
+  transform: translateY(-8px) scale(1.03);
+}
+.dish-card img {
+  width: 260px;
+  height: 200px;
+  border-radius: 18px;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 3px 16px rgba(34,34,59,0.10);
+  border: 2px solid #ececec;
+  background: #f7f7f7;
+}
+.dish-card h3 {
+  margin: 0.5rem 0 0.3rem 0;
+  font-size: 1.7rem;
+  color: #23223b;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+.dish-card p {
+  margin: 0.2rem 0 1.2rem 0;
+  color: #4a4e69;
+  font-size: 1.18rem;
+  text-align: center;
+}
+.dish-card button {
+  background: linear-gradient(90deg, #5f6fff 0%, #3f51b5 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8em 2em;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(63, 81, 181, 0.10);
+  transition: background 0.2s, transform 0.2s;
+  margin-top: auto;
+}
+.dish-card button:hover {
+  background: linear-gradient(90deg, #3f51b5 0%, #5f6fff 100%);
+  transform: scale(1.06);
+}
+@media (max-width: 900px) {
+  .dish-card {
+    min-width: 220px;
+    max-width: 260px;
+    min-height: 260px;
+    max-height: 320px;
+    padding: 16px 6px 14px 6px;
+  }
+  .dish-card img {
+    width: 120px;
+    height: 90px;
+  }
+  .dish-card h3 {
+    font-size: 1.1rem;
+  }
+  .dish-card p {
+    font-size: 0.98rem;
+  }
+  .dish-card button {
+    font-size: 1rem;
+    padding: 0.5em 1.2em;
+  }
+}
