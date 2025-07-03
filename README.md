@@ -5,7 +5,7 @@
 cd backend
 npm install
 ```
--Specify your MongoDB URI in `server.js` or create a `.env` file containing the same
+-Specify your MongoDB URI in `server.js` or create a `.env` file containing the same.
 Either set up a MongoDB cluster or configure a replica set if you're running MongoDB locally, as Change Streams only work with replicated deployments.
 
 - Start the backend:
